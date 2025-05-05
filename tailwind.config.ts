@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				sepia: {
+					DEFAULT: '#E0D3AF',
+					light: '#F5EFD9',
+					dark: '#8C7452',
+				},
+				amber: {
+					DEFAULT: '#A63C06',
+					dark: '#400101',
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,39 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+					},
+					'100%': {
+						opacity: '1',
+					}
+				},
+				'develop-photo': {
+					'0%': {
+						filter: 'contrast(0.8) brightness(0.8) sepia(0.2)',
+						opacity: '0.6',
+					},
+					'100%': {
+						filter: 'contrast(1) brightness(1) sepia(0.5)',
+						opacity: '1',
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 1s ease-out',
+				'develop-photo': 'develop-photo 1.5s ease-out',
+			},
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'courier': ['Courier Prime', 'monospace'],
+			},
+			backgroundImage: {
+				'paper-texture': "url('/paper-texture.png')",
+				'grain': "url('/grain.png')",
 			}
 		}
 	},
